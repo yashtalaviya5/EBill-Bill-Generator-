@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+
+<div class="container shadow mt-4 rounded " style="background-color: #fcfcfc;width:70% ">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+                 <img src="~/Content/Images/BannerHome.jpg" class="d-block mx-auto" style="height:450px" />
+            </div>
+            <div>
+                <h2>Bill Generator Application</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+<section class="py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Why Bill Generator?</h2>
+        <p class="text-muted">
+            You want to generate perfect bills. We are here to help you achieve them.
+        </p>
+    </div>
+
+    <div class="row justify-content-center text-center">
+        <div class="col-md-4 mb-4 d-flex">
+            <div class="p-4 shadow-sm rounded w-100" style="background-color: #c3c3de;">
+                <div class="mb-3" style="font-size: 40px; color: black;">
+                    <i class="bi bi-mouse2-fill"></i>
+
+                </div>
+                <h5 class="fw-bold text-light">Easy To Use</h5>
+                <p class="fw-bold text-light">
+                    Easy to use platform for anyone to generate variety of bills required in day to day life.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 d-flex">
+            <div class="p-4 shadow-sm rounded w-100" style="background-color: #c3c3de;">
+                <div class="mb-3" style="font-size: 40px;">
+                    <i class="bi bi-headset"></i>
+                </div>
+                <h5 class="fw-bold text-light">24/7 Customer Service</h5>
+                <p class="fw-bold text-light">
+                    Reach out to us anytime via chat, email or phone. Our support team are here to guide you to generate bills.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="container shadow mt-4 rounded pt-5 pb-3 mt-5 w-100 bg-light">
+    <!-- Full-width background -->
+    <div class="container-fluid">
+        <!-- Limit content width -->
+        <div class="row px-5">
+            <!-- Logo & Company -->
+            <div class="col-md-3 mb-4">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/Content/Images/EBILL LOGO PNG.png" alt="Bill Generator Logo" style="height: 80px;">
+                </a>
+                <p>© YTP & Company Pvt Ltd.<br>All rights reserved 2025</p>
+                <p>Made with <span style="color:red;">♥</span> in India</p>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">USEFUL LINKS</h6>
+                <ul class="list-unstyled">
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("Create", "EBill")">Create Bill</a></li>
+                    <li><a href="@Url.Action("Index", "EBill")">View Bill</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Pricing & Company -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">PRICING</h6>
+                <p>Pay as you go</p>
+
+                <h6 class="fw-bold mt-4">COMPANY</h6>
+                <ul class="list-unstyled">
+                    <li><a href="@Url.Action("AboutUs", "EBill")">About Us</a></li>
+                    <li><a href="@Url.Action("ContactUs", "EBill")">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">CONTACT US</h6>
+                <p>
+                    Gondal,<br>
+                    Gujarat, 360311 India <br>
+                    Mail: <a href="mailto:ytpncomany@gmail.com">ytpncomany@gmail.com</a>
+                </p>
+                <div>
+                    <a href="https://www.linkedin.com/in/yashtalaviya/" class="me-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="http://instagram.com/tirthhhhh999" class="me-2"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+

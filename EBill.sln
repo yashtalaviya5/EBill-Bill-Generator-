@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBill", "EBill\EBill.csproj", "{DFB5F74B-FAE6-4906-AA93-0AF56551B796}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFB5F74B-FAE6-4906-AA93-0AF56551B796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB5F74B-FAE6-4906-AA93-0AF56551B796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB5F74B-FAE6-4906-AA93-0AF56551B796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB5F74B-FAE6-4906-AA93-0AF56551B796}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E61B5F35-EF69-4BC0-A83A-4F4ECF03ADBD}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,162 @@
+﻿@model EBill.Models.BillDetail
+@{
+    ViewBag.Title = "ViewBill";
+}
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa;
+    }
+
+    .invoice-container {
+        max-width: 850px;
+        margin: 30px auto;
+        padding: 40px;
+        background-color: #FAF5EF;
+        border: 1px solid #dee2e6;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+    }
+
+    .invoice-header {
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #0d6efd;
+    }
+
+        .invoice-header .company-details .name {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #0d6efd;
+        }
+
+        .invoice-header .company-details p {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 2px;
+        }
+
+        .invoice-header .bill-title h2 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: #343a40;
+        }
+
+        .invoice-header .bill-title p {
+            font-size: 1rem;
+            color: #495057;
+        }
+
+    .bill-to .card-header {
+        background-color: #0d6efd;
+        color: white;
+        font-weight: 500;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .bill-to .card-body {
+        padding: 1.25rem;
+        font-size: 0.95rem;
+    }
+
+        .bill-to .card-body .customer-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+    .invoice-table thead {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .invoice-table th, .invoice-table td {
+        vertical-align: middle;
+        padding: 1rem;
+    }
+
+    .invoice-table .text-end {
+        text-align: right;
+    }
+
+    .totals-section {
+        margin-top: 30px;
+        text-align: right;
+    }
+
+        .totals-section .total-amount {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #151b54;
+        }
+
+        .totals-section .total-label {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #343a40;
+        }
+</style>
+
+    <div class="invoice-container">
+        <div class="row invoice-header align-items-center">
+            <div class="col-md-7 company-details">
+                <img src="~/Content/Images/EBILL LOGO PNG.png" alt="YTP" style="max-height: 60px;">
+                <p>Gondal, India 360311</p>
+                <p><strong>Phone:</strong> 6512999999</p>
+                <p><strong>Email:</strong> ytpncompany@gmail.com</p>
+            </div>
+            <div class="col-md-5 text-md-end bill-title">
+                <h2>INVOICE</h2>
+                <p><strong>Invoice #:</strong> @Model.Id</p>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-5">
+                <div class="card bill-to">
+                    <div class="card-header" style="background-color:#151b54">
+                        Bill To
+                    </div>
+                    <div class="card-body">
+                        <p class="customer-name">@Model.CustomerName</p>
+                        <p>@Model.Address</p>
+                        <p>@Model.MobileNumber</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered invoice-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th class="text-end">Price</th>
+                            <th class="text-end">Quantity</th>
+                            <th class="text-end">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.ProductName</td>
+                                <td class="text-end">@item.Price.ToString("0.##")</td>
+                                <td class="text-end">@item.Quantity.ToString("0.##")</td>
+                                <td class="text-end">@((item.Price * item.Quantity).ToString("0.##"))</td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 totals-section">
+                <span class="total-label">Grand Total:</span>
+                <span class="total-amount">@Model.TotalAmount.ToString("C", new System.Globalization.CultureInfo("en-IN"))</span>            </div>
+        </div>
+    </div>
